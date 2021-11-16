@@ -76,6 +76,10 @@ public class Game {
 	 */
 	public boolean testLose() {
 		// TODO
+		Case case = getPosition();
+		if (isSafe(Case case) && !isWinningPosition(Case case)){
+			return true;
+		}
 		return false;
 	}
 
@@ -87,6 +91,10 @@ public class Game {
 	 */
 	public boolean testWin() {
 		// TODO
+		Case case = getPosition();
+		if (isSafe(Case case) && isWinningPosition(Case case)){
+			return true;
+		}
 		return false;
 	}
 
