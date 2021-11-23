@@ -76,8 +76,7 @@ public class Game {
 	 */
 	public boolean testLose() {
 		// TODO
-		Case case = getPosition();
-		if (isSafe(Case case) && !isWinningPosition(Case case)){
+		if (environment.isSafe(frog.getPosition()) && ! environment.isWinningPosition(frog.getPosition())){
 			return true;
 		}
 		return false;
@@ -91,8 +90,7 @@ public class Game {
 	 */
 	public boolean testWin() {
 		// TODO
-		Case case = getPosition();
-		if (isSafe(Case case) && isWinningPosition(Case case)){
+		if (environment.isSafe(frog.getPosition()) && environment.isWinningPosition(frog.getPosition())){
 			return true;
 		}
 		return false;

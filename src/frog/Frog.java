@@ -12,7 +12,7 @@ public class Frog implements IFrog {
 	public Frog(Game game){
 		this.game = game;
 		this.direction = Direction.up;
-		this.cases = new Case (absc this.game.width / 2, ord : 0);
+		this.cases = new Case (this.game.width / 2,  0);
 	}
 
 	public Case getPosition() { return this.cases; }
@@ -23,14 +23,14 @@ public class Frog implements IFrog {
 		this.direction = key;
 
 		if (key == Direction.up && this.cases.ord + 1 < this.game.height) {
-			this.cases = new Case (this.cases.absc, ord : this.cases.ord + 1);
+			this.cases = new Case (this.cases.absc,  this.cases.ord + 1);
 		}
 
-		if (key == Direction.down && this.cases.ord - 1 > 0) {
-			this.cases = new Case (this.cases.absc, ord : this.cases.ord - 1);
+		if (key == Direction.down && this.cases.ord  > 0) {
+			this.cases = new Case (this.cases.absc, this.cases.ord - 1);
 		}
 
-		if (key == Direction.left && this.cases.absc - 1 > 0) {
+		if (key == Direction.left && this.cases.absc  > 0) {
 			this.cases = new Case (this.cases.absc - 1, this.cases.ord);
 		}
 
